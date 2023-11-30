@@ -8,8 +8,6 @@ def adicionar_nome_e_tipo_sanguineo():
     lista_de_pessoas.append(pessoa)
     print(f"Dados de {pessoa} armazenados com sucesso!")
 
-# Visualizar a lista de pacientes
-
 def visualizar_lista():
     if not lista_de_pessoas:
         print("A lista está vazia")
@@ -20,7 +18,6 @@ def visualizar_lista():
                 f"Nome: {pessoa['Nome']}, Tipo Sanguíneo: {pessoa['Tipo Sanguíneo']}"
             )
 
-# Salvar os dados em um arquivo txt
 def salvar_dados():
     with open(nome_do_arquivo, "w") as arquivo:
         for pessoa in lista_de_pessoas:
@@ -29,7 +26,6 @@ def salvar_dados():
             )
         print("Arquivo gerado com sucesso!")
 
-#Carregar dados
 def carregar_dados():
     try:
         with open(nome_do_arquivo, "r") as arquivo:
@@ -48,7 +44,6 @@ def carregar_dados():
     
 carregar_dados()
 
-#Menu principal
 while True:
     print("\n Opções")
     print(
